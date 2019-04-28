@@ -104,6 +104,10 @@ if(isset($_SESSION["admin"])){
       include("View/manage_customer.php");
       break;
 
+      case "manage_slide":
+      include("View/manage_slide.php");
+      break;
+
       default:
       include("View/home.php");
       break;

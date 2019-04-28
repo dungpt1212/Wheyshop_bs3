@@ -5,6 +5,18 @@
     font-size: 16px;
 }
 
+div#group_left a:hover {
+    color: red;
+}
+
+.thumbnail a.btn.btn-default.btn-xs {
+    width: 85px;
+}
+
+.thumbnail b {
+    font-size: 12px;
+}
+
 .span_detail i {
     text-decoration: line-through;
     font-size: 20px;
@@ -316,8 +328,8 @@ div#item {
 }
 
 #main .thumbnail img {
-    /* width: 140px; */
-    /* height: 140px; */
+    width: 140px;
+    height: 140px;
 }
 
 #cart_left {}
@@ -1102,7 +1114,7 @@ div#menu-right img {
     opacity: 195.1;
     height: 335px;
     position: fixed;
-    top: -95px;
+    top: -206px;
     z-index: 22222222;
     width: 100%;
     height: 37%;
@@ -1416,11 +1428,11 @@ input.soluong {
 
 .dongia p:nth-child(1) {}
 
-p.hÆ°Æ¡ngvi {
+p.hÃ†Â°Ã†Â¡ngvi {
     font-size: 70%;
 }
 
-p.hÆ°Æ¡ngvi span {
+p.hÃ†Â°Ã†Â¡ngvi span {
     font-size: 106%;
 }
 

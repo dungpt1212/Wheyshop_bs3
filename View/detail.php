@@ -1,6 +1,10 @@
 <?php 
 if(isset($_GET["idproduct"])){
   $idproduct = $_GET["idproduct"];
+  //tăng views start
+  $sql = "UPDATE tbl_product_detail SET Views= Views + 1 WHERE IdProduct ='$idproduct'";
+  $query = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+  //tăng views end
   $sql= "select* from tbl_product_detail inner join tbl_product_group on tbl_product_detail.IdGroupProduct = tbl_product_group.IdGroupProduct 
   where IdProduct = '$idproduct' ";
   $result = mysqli_query($conn, $sql);
@@ -131,53 +135,53 @@ if(isset($_GET["idproduct"])){
   <div class="row">
     <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
       <!-- <h3>BÌNH LUẬN</h3>
-      <div class="fb-comments" data-href="" data-numposts="5"></div> -->
-      <div class="container">
-       <div class="row">
+        <div class="fb-comments" data-href="" data-numposts="5"></div> -->
+        <div class="container">
+         <div class="row">
 
-         <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 comment">
-           <h3>Bình luận(999)</h3>
-           <div class="user"><span class="fa fa-user"></span></div>
-           <div class="form-group">
-             <textarea class="form-control" rows="5" id="comment"></textarea>
+           <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 comment">
+             <h3>Bình luận(999)</h3>
+             <div class="user"><span class="fa fa-user"></span></div>
+             <div class="form-group">
+               <textarea class="form-control" rows="5" id="comment"></textarea>
+             </div>
+             <div class="btn btn-success pull-right">Bình luận</div>
            </div>
-           <div class="btn btn-success pull-right">Bình luận</div>
-         </div>
 
-         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 select">
-           <div class="form-group">
-             <select class="form-control">
-               <option>Bình luận mới nhất</option>
-               <option>Bình luận nổi bật</option>
-             </select>
+           <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 select">
+             <div class="form-group">
+               <select class="form-control">
+                 <option>Bình luận mới nhất</option>
+                 <option>Bình luận nổi bật</option>
+               </select>
+             </div>
            </div>
-         </div>
 
-       </div>
-       <?php for($i=0; $i < 5; $i++){ ?>
-         <div class="row comment_detail">
-           <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-             <div class="container-fluid">
-               <div class="row">
-                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 left">
-                  <div class="user"><span class="fa fa-user"></span></div>
-                </div>
-                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 center">
-                 <p>Phạm Trung Dũng</p>
-                 <p>Sản phẩm rất đúng với quảng cáo, giao hàng nhanh, chính xác! mình rất hài lòng :), mong ad liên tục cập nhật nhiều sản phẩm hay hơn nữa nhé :)))</p>
-                 <p>Trả lời <span class="fa fa-thumbs-up"></span> <span class="fa fa-thumbs-down"></span></p>
-               </div>
-               <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 right">
-                 <p>2 giờ trước</p>
+         </div>
+         <?php for($i=0; $i < 5; $i++){ ?>
+           <div class="row comment_detail">
+             <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+               <div class="container-fluid">
+                 <div class="row">
+                   <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 left">
+                    <div class="user"><span class="fa fa-user"></span></div>
+                  </div>
+                  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 center">
+                   <p>Phạm Trung Dũng</p>
+                   <p>Sản phẩm rất đúng với quảng cáo, giao hàng nhanh, chính xác! mình rất hài lòng :), mong ad liên tục cập nhật nhiều sản phẩm hay hơn nữa nhé :)))</p>
+                   <p>Trả lời <span class="fa fa-thumbs-up"></span> <span class="fa fa-thumbs-down"></span></p>
+                 </div>
+                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 right">
+                   <p>2 giờ trước</p>
+                 </div>
                </div>
              </div>
            </div>
          </div>
-       </div>
-     <?php } ?>
+       <?php } ?>
+     </div>
    </div>
  </div>
-</div>
 </div> <!-- Chèn bình luận fb end -->
 
 <div class="container desktop"> <!-- san pham lien quan start -->

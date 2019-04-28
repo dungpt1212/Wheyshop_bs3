@@ -57,5 +57,13 @@
 
 	} /*Xóa tài khoản khách hàng end*/
 
+	if(isset($_GET["idslide"])){
+		$idslide = $_GET["idslide"];
+		$sql="DELETE FROM `tbl_slide` WHERE id = '$idslide' ";
+        $query= mysqli_query($conn, $sql) or die("Không thể xóa");
+        header("location: ../index.php?page=manage_slide");
+
+	} /*Xóa slider end*/
+
 
  ?>

@@ -63,12 +63,12 @@
       <div class="thoat glyphicon glyphicon-remove "></div>
       <form method="post" data-toggle="validator" role="form"> <!-- form start -->
         <div class="form-group" style="position: relative;">
-          <label for="inputName" class="control-label">User:</label>
+          <label for="inputName" class="control-label">Tài khoản:</label>
           <input type="text" class="form-control" id="inputName" name="txt_user" placeholder="Nhập tài khoản..." required>
           <span class="glyphicon glyphicon-user" style="font-size: 12px;font-weight: bold;position: absolute;top: 36px;color: #c5b9b9;"></span>
         </div>
         <div class="form-group">
-          <label for="inputPassword" class="control-label">Password:</label>
+          <label for="inputPassword" class="control-label">Mật khẩu:</label>
           <div class="form-inline row">
             <div class="form-group col-sm-6" style="position: relative;">
               <input type="password" data-minlength="8" class="form-control" id="inputPassword" name="txt_pass" placeholder="Nhập mật khẩu..." required style="">
@@ -76,9 +76,9 @@
             </div>
           </div>
           <div class="form-group">
-            <label>
+            <!-- <label>
               <input type="checkbox" checked="checked" name="remember"> Nhớ mật khẩu
-            </label>
+            </label> -->
           </div>
           <div class="form-group">
             <button type="submit" class="btn btn-block" name="bt_dangnhap">Đăng nhập</button>
@@ -94,13 +94,13 @@
         margin-bottom: 25px;">Đăng ký</h2>
         <form method="post">
           <div class="form-group" style="position: relative;">
-            <label for="Username">Username:</label>
+            <label for="Username">Tài khoản:</label>
             <input type="text" class="form-control" id="txt_user_dk" placeholder="Nhập tên tài khoản..." name="txt_user_dk">
             <span class="label label-danger pull-right" id="lb_user"></span>
             <span class="glyphicon glyphicon-user" style="font-size: 12px;font-weight: bold;position: absolute;top: 36px;color: #c5b9b9;"></span>
           </div>
           <div class="form-group" style="position: relative;">
-            <label for="pwd">Password:</label>
+            <label for="pwd">Mật khẩu:</label>
             <input type="password" class="form-control" id="txt_pass_dk" placeholder="Nhập mật khẩu..." name="txt_pass_dk">
             <span class="label label-danger pull-right" id="lb_pass"></span>
             <span class="glyphicon glyphicon-lock" style="font-size: 12px;font-weight: bold;position: absolute;top: 36px;color: #c5b9b9;"></span>

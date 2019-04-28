@@ -23,8 +23,8 @@ if(isset($_GET["idgroupdetail"]) && isset($_GET["idgroupproduct"])){
             while($row = mysqli_fetch_array($result)){
 
               ?>
-              <li><img src="upload/<?PHP echo($row["UrlImage"]) ?>">
-                <p><a href="index.php?page=detail&&idproduct=<?php echo($row['IdProduct']) ?>" style="color: #03564f;"><?PHP echo($row["NameProduct"]) ?></a></p>
+              <li><a href="index.php?page=detail&&idproduct=<?php echo($row['IdProduct']) ?>"><img src="upload/<?PHP echo($row["UrlImage"]) ?>"></a>
+                <p><a href="index.php?page=detail&&idproduct=<?php echo($row['IdProduct']) ?>"><?PHP echo($row["NameProduct"]) ?></a></p>
               </li>
             <?php } ?>
           </ul>
@@ -87,7 +87,7 @@ if(isset($_GET["idgroupdetail"]) && isset($_GET["idgroupproduct"])){
                     ?>
                     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
                       <div class="thumbnail text-center">
-                        <img src="upload/<?PHP echo($row["UrlImage"]) ?>">
+                        <a href="index.php?page=detail&&idproduct=<?php echo($row['IdProduct']) ?>"><img src="upload/<?PHP echo($row["UrlImage"]) ?>"></a>
                         <div class="caption">
                          <p class="p_1" style="height: 36px">
                           <?PHP 
@@ -99,15 +99,15 @@ if(isset($_GET["idgroupdetail"]) && isset($_GET["idgroupproduct"])){
 
                           ?>
                         </p>
-                        <h5 style="color: #CB070A; font-weight: bold; height: 50px"><?PHP echo($row["NameProduct"]) ?></h5>
+                        <a href="index.php?page=detail&&idproduct=<?php echo($row['IdProduct']) ?>"><h5 style="color: #CB070A; font-weight: bold; height: 50px"><?PHP echo($row["NameProduct"]) ?></h5></a>
                         <div id="sao">
-                          <?php 
-                          $a=rand(3,5);
-                          for ($i=0; $i < $a ; $i++) { 
-                                    # code...
-                           ?>
-                           <p class="glyphicon glyphicon-star" style="color: red"></p>
-                         <?php } ?>
+                         <!--  <?php 
+                         $a=rand(3,5);
+                         for ($i=0; $i < $a ; $i++) { 
+                                   # code...
+                          ?>
+                          <p class="glyphicon glyphicon-star" style="color: red"></p>
+                                                  <?php } ?> -->
 
                        </div>
                        <p class="p_1"">

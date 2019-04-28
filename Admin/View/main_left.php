@@ -38,6 +38,7 @@
             <a href="index.php?page=manage_bill" class="list-group-item"><span class="glyphicon glyphicon-shopping-cart"></span>Quản lý Đơn hàng</a>
             <a href="index.php?page=manage_customer" class="list-group-item"><span class="glyphicon glyphicon-star-empty"></span>Quản lý khách hàng</a>
              <a href="index.php?page=manage_statistics" class="list-group-item"><span class="glyphicon glyphicon-star-empty"></span>Quản lý thống kê</a>
+            <a href="index.php?page=manage_slide" class="list-group-item"><span class="glyphicon glyphicon-plus"></span>Quản lý slider</a>
             <a href="index.php?page=add_admin" class="list-group-item"><span class="glyphicon glyphicon-plus"></span>Thêm tài khoản Admin</a>
             <a href="#" class="list-group-item"></a>
           </div>
