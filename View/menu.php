@@ -142,10 +142,10 @@
     </li>
 
     <li> 
-      <a class="fa fa-twitter pull-left" style="color: #ffffff"></a>
+      <a class="fa fa-twitter-square pull-left" style="color: #ffffff"></a>
       <a class="fa fa-envelope pull-left" style="color: #ffffff"></a>
-      <a class="fa fa-facebook-square pull-left" style="color: #ffffff"></a>
-      <a class="fa fa-youtube pull-left" style="color: #ffffff"></a>
+      <a class="fa fa-facebook-f pull-left" style="color: #ffffff"></a>
+      <a class="fa fa-youtube-square pull-left" style="color: #ffffff"></a>
     </li>
     <?php if(isset($_SESSION['admin'])){ ?>
       <li><a href="Admin/Index.php" style="border: 1px solid;font-weight: bold; color: #03f3ff;margin-left: 35px;border-radius: 5px;"><span class="glyphicon glyphicon-arrow-right" style="margin-right: 5px"></span>Admin page</a></li>

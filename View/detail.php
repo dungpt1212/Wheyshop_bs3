@@ -46,7 +46,7 @@ if(isset($_GET["idproduct"])){
     <div class="btn btn-primary"><?PHP echo(number_format($row["NewPrice"])."đ") ?></div>
     <p class="trichdan">- <?PHP echo($row["Description"]) ?></p>
     <form action="View/addcart.php?idproduct=<?php echo($idproduct) ?>" method="post">
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label for="sel1"><p><span class="span_detail1">*</span>Hương vị: </p></label>
         <select class="form-control" id="sel1" name="sel_huongvi">
           <option>Cafe</option>
@@ -54,8 +54,8 @@ if(isset($_GET["idproduct"])){
           <option>Dâu</option>
         </select>
       </div>
-      <p><span class="span_detail1">*</span>Quà tặng(<span class="span_detail1">Click để chọn</span>)</p>
-      <div class="container-fluid">
+      <p><span class="span_detail1">*</span>Quà tặng(<span class="span_detail1">Click để chọn</span>)</p> -->
+      <!-- <div class="container-fluid">
         <div class="quatang">
           <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -65,7 +65,7 @@ if(isset($_GET["idproduct"])){
               <img src="upload/img_binhlac.png">
             </div>
           </div>
-
+      
           <div class="row" style="margin-top: 15px">
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
               <img src="upload/img_binhlacloxo.png">
@@ -80,10 +80,11 @@ if(isset($_GET["idproduct"])){
           <option>Bình lắc 3 ngăn</option>
           <option>Bình lắc lò xo</option>
           <option>Gói mẫu Nitrotech</option>
-
+        
         </select>
-      </div>
-      <a href="#modal-id" class="btn_mua" data-toggle="modal"><p style=""><span class="fa fa-shopping-cart" style="font-size: 30px; margin-right: 5px" ></span>Mua ngay/Thêm vào giỏ hàng</p></a>
+      </div> -->
+     <!--  <a href="#modal-id" class="btn_mua" data-toggle="modal"><p style=""><span class="fa fa-shopping-cart" style="font-size: 30px; margin-right: 5px" ></span>Mua ngay/Thêm vào giỏ hàng</p></a> -->
+      <a href="View/addcart.php?idproduct=<?php echo($row['IdProduct']) ?>" class="btn_mua"><p style=""><span class="fa fa-shopping-cart" style="font-size: 30px; margin-right: 5px" ></span>Mua ngay/Thêm vào giỏ hàng</p></a>
       <!-- <a class="btn btn-primary" data-toggle="modal" href='#modal-id'>Trigger modal</a> -->
       <div class="modal fade" id="modal-id">
         <div class="modal-dialog">

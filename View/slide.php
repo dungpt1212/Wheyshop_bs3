@@ -21,7 +21,7 @@
               ?>
 
               <div class="item <?php if($row['Active'] == 1) echo("active") ?>">
-                <img src="<?php echo($row['Link']) ?>" style="width: 100%">
+                <img src="<?php echo($row['Link']) ?>" style="width: 752px; height: 383px">
                 <div class="carousel-caption">
                  <h3>Whey shop</h3>
                  <p>Chăm sóc thể hình của bạn</p>

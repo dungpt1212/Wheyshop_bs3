@@ -204,30 +204,31 @@ $(document).ready(function(){
         $(this).find('.to').show();
 
     });
+    $(document).mouseup(function(e) 
+        {
+            var container = $(".to");
 
-    $('.td_status a.fa.fa-check-circle').click(function(event) {
-        var trangthai = $('.sl_trangthai').val();
-        var thaydoi = $(this).parents('.td_status').find('.btn_trangthai');
-        var idbill = $(this).parents('.td_status').find('.btn_trangthai').attr("idbill");
-        $.get("View/update_status.php", { trangthai: trangthai, idbill: idbill }, function(data) {
-            thaydoi.html(data);
-            if (trangthai == "Hoàn tất") {
-                thaydoi.css({
-                    'background': 'red',
-                    'color': 'yellow'
-
-                });
-            } else {
-                thaydoi.css({
-                    'background': '#337ab7',
-                    'color': 'white'
-
-                });
+            // if the target of the click isn't the container nor a descendant of the container
+            if (!container.is(e.target) && container.has(e.target).length === 0) 
+            {
+                container.hide();
+                $('.nho').hide();
             }
+    });
+
+    /* thay đổi trạng thái đơn hàng start*/
+     $('.sl_trangthai').change(function(event) {
+        var trangthai = $(this).val();
+        var idbill = $(this).attr('idbill');
+        if (trangthai == "Hoàn tất") {
+              $(this).parent('.to').prev('.status').html('Hoàn thành');
+              $(this).parent('.to').prev('.status').css('color', 'red');
+            } else {
+                $(this).parent('.to').prev('.status').html('Chờ xử lý...');
+                 $(this).parent('.to').prev('.status').css('color', '#1f1bc5');
+            }
+        $.get("View/update_status.php", { trangthai: trangthai, idbill: idbill }, function(data) {
         })
-        $('.td_status').find('.nho').hide();
-        $('.td_status').find('.to').hide();
-        return false;
     });
     /* thay đổi trạng thái đơn hàng end*/
 

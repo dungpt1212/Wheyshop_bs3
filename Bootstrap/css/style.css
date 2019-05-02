@@ -10,11 +10,11 @@ div#group_left a:hover {
 }
 
 .thumbnail a.btn.btn-default.btn-xs {
-    width: 85px;
+    width: 78px;
 }
 
 .thumbnail b {
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .span_detail i {
@@ -593,6 +593,7 @@ a:hover {
 }
 
 #navbar-right ul li:last-child {
+    transform: translateY(17px);
     border-right: none;
     border-left: none;
 }
@@ -1428,11 +1429,11 @@ input.soluong {
 
 .dongia p:nth-child(1) {}
 
-p.hÃ†Â°Ã†Â¡ngvi {
+p.hÃƒâ€ Ã‚Â°Ãƒâ€ Ã‚Â¡ngvi {
     font-size: 70%;
 }
 
-p.hÃ†Â°Ã†Â¡ngvi span {
+p.hÃƒâ€ Ã‚Â°Ãƒâ€ Ã‚Â¡ngvi span {
     font-size: 106%;
 }
 

@@ -3,6 +3,16 @@
     padding: 0px;
 }
 
+i.status {
+    border: 1px solid red;
+    width: 80px;
+    display: block;
+}
+
+i.status:hover {
+    cursor: pointer;
+}
+
 button.btn.btn-success {
     position: relative;
     color: #05fff5;
